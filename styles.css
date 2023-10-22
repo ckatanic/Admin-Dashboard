@@ -22,13 +22,38 @@ body {
     color: white;
 }
 
+.left-side-bar ul {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-left: calc(1rem + 12.5px);
+}
+
+.left-side-bar ul li {
+    display: flex;
+    /* width: fit-content; */
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+
+
+.left-side-bar ul li:nth-child(6) {
+    margin-bottom: 4rem;
+}
+
+.left-side-bar ul svg {
+    width: 25px;
+    margin-right: 1rem;
+}
+
 .logo {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0 2rem 1rem;
 }
 
-.logo-image {
+.logo-image svg {
     width: 50px;
     margin-right: 1rem;
 }
