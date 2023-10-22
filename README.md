@@ -1,2 +1,2 @@
 # Admin-Dashboard
-Project to create a layout using advanced CSS grid and Flexbox 
+Project to create a webpage using advanced CSS grid and Flexbox layouts
