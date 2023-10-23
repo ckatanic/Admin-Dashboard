@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+:root {
+    --color-blue: rgb(43, 152, 221);
+}
+
 body {
     font-family: "Roboto";
 }
@@ -11,17 +15,16 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 275px 1fr;
     height: 100vh;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .left-side-bar {
-    background-color: rgb(43, 152, 221);
+    background-color: var(--color-blue);
     color: white;
 }
-
 
 .icon {
     display: flex;
@@ -30,13 +33,16 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 li {
     list-style-type: none;  
   }
 
+svg {
+    width: 25px;
+}
 
 .logo {
     display: flex;
@@ -45,16 +51,13 @@ li {
 }
 
 .logo-image svg {
-    width: 40px;
-}
-
-.logo-image svg{
-    color: white;
+    width: 50px;
 }
 
 .left-side-bar ul {
     font-size: 1.2rem;
     font-weight: bold;
+    
 }
 
 .left-side-bar ul li {
@@ -62,6 +65,11 @@ li {
     align-items: center;
     margin-bottom: 1rem;
     cursor: pointer;
+    padding: .25rem 0;
+}
+
+.left-side-bar ul li:hover {
+    background-color: rgb(0, 88, 143);
 }
 
 .left-side-bar ul li:nth-child(6) {
@@ -74,12 +82,82 @@ li {
 
 .main {
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 175px 1fr;
 }
 
 .header {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
     background-color: white;
+    box-shadow: 0px 2px 5px #bfbfbf;
+    z-index: 1;
+    padding: 1rem 2rem;
+
 }
+
+.top-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-content: center;
+}
+
+.top-header > * {
+    align-self: center;
+}
+
+.top-header > *:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container input {
+    max-width: 25vw;
+    min-width: 250px;
+}
+
+.search {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #e8e8e8;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.bottom-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bottom-header svg {
+    /* background-color: red; */
+    width: 75px;
+}
+
+.user-greeting {
+    flex: 1;
+}
+
+.button {
+    background-color: var(--color-blue);
+    color: white;
+    font-size: 1rem;
+    width: 90px;
+    height: 2rem;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
 
 .content {
     background-color: rgb(235, 235, 235);
