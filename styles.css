@@ -16,7 +16,6 @@ body {
 .container {
     display: grid;
     grid-template-columns: 275px 1fr;
-    height: 100vh;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -24,6 +23,11 @@ body {
 .left-side-bar {
     background-color: var(--color-blue);
     color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    align-self: start;
 }
 
 .icon {
@@ -47,6 +51,7 @@ svg {
 .logo {
     display: flex;
     align-items: center;
+
     padding: 1.5rem 0 2.5rem 0;
 }
 
@@ -82,7 +87,7 @@ svg {
 
 .main {
     display: grid;
-    grid-template-rows: 175px 1fr;
+    grid-template-rows: 185px 1fr;
 }
 
 .header {
@@ -92,17 +97,21 @@ svg {
     box-shadow: 0px 2px 5px #bfbfbf;
     z-index: 1;
     padding: 1rem 2rem;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
 
 }
 
 .top-header {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
-    align-content: center;
+    padding-right: 1rem;
 }
 
 .top-header > * {
     align-self: center;
+
 }
 
 .top-header > *:not(:first-child) {
@@ -130,19 +139,27 @@ svg {
     font-size: 1rem;
 }
 
+.medium-icon {
+    width: 50px;
+}
+
 .bottom-header {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.bottom-header svg {
-    /* background-color: red; */
-    width: 75px;
+.large-icon {
+    width: 70px;
 }
 
 .user-greeting {
     flex: 1;
+}
+
+.user-name {
+    padding-top: 0.25rem;
+    font-size: 1.5rem;
 }
 
 .button {
@@ -157,10 +174,44 @@ svg {
     cursor: pointer;
 }
 
-
-
 .content {
     background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    padding: 2rem;
 }
 
+.cards-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1.5rem repeat(auto-fill, 200px);
+    grid-auto-flow: row;
+}
+
+.cards-title {
+    grid-column: 1 / -1;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 2px 5px #bfbfbf;
+}
+
+.project-card {
+
+}
+
+.project-card::after {
+    background-color: rgb(232, 201, 0);
+    width: 10px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 
