@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    align-self: start;
+    /* align-self: start; */
 }
 
 .icon {
@@ -185,8 +185,8 @@ svg {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 1.5rem repeat(auto-fill, 200px);
-    grid-auto-flow: row;
+    grid-template-rows: 1.5rem repeat(200px);
+    grid-auto-flow: row
 }
 
 .cards-title {
@@ -198,10 +198,15 @@ svg {
     border-radius: 15px;
     position: relative;
     box-shadow: 0px 2px 5px #bfbfbf;
+    padding: 2rem;
+}
+
+.card p {
+    padding-top: 0.5rem;
 }
 
 .project-card {
-
+    height: 200px;
 }
 
 .project-card::after {
@@ -211,7 +216,13 @@ svg {
     content: "";
     position: absolute;
     left: 0;
+    top: 0;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+
+.link-icons {
+    padding-top: 2rem;
+    text-align: end;
 }
 
