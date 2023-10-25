@@ -239,6 +239,7 @@ p {
     gap: 1rem;
 }
 
+/* remove later */
 .announcements-card, .trending-card {
     height: 100%;
 }
@@ -251,7 +252,11 @@ p {
     position: relative;
 }
 
-.announcement:after {
+.announcement:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.announcement:not(:last-of-type):after {
     content: "";
     position: absolute;
     width: calc(100% + 10px);
@@ -259,6 +264,14 @@ p {
     background: linear-gradient(to right, #eee, #d8d8d8 50%, #eee);
     bottom: -1rem;
     left: -5px;
-
 }
+
+.announcement p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
