@@ -16,7 +16,6 @@ body {
 .container {
     display: grid;
     grid-template-columns: 275px 1fr;
-    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -188,7 +187,7 @@ p {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 1.5rem repeat(3, minmax(200px, 1fr));
+    grid-template-rows: 1.5rem repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-flow: row;
 }
 
